@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{BLOG_TITLE} | Abvorn</title>
+<link href="https://fonts.googleapis.com/css2?family={FONT_FAMILY}&display=swap" rel="stylesheet">
+<style>
+    :root { --primary: {PRIMARY_COLOR}; --accent: {ACCENT_COLOR}; --font-heading: '{FONT_HEADING}', serif; --font-body: '{FONT_BODY}', sans-serif; }
+    body { font-family: var(--font-body); margin:0; background:#fff; color:#111; }
+    header { background:#000; padding:20px 0; border-bottom:4px solid var(--accent); }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .header-content { display:flex; justify-content:space-between; align-items:center; }
+    .logo-link { display:flex; align-items:center; text-decoration:none; }
+    .logo-img { max-height:40px; width:auto; }
+    .logo-text { color:#fff; text-decoration:none; font-family:var(--font-heading); font-size:24px; font-weight:700; display:none; }
+    .logo-img:not([src]), .logo-img[src=""], .logo-img[src="#"] { display:none; }
+    .logo-img:not([src]) ~ .logo-text, .logo-img[src=""] ~ .logo-text, .logo-img[src="#"] ~ .logo-text { display:block; }
+    .nav-link { color:#fff; text-decoration:none; margin-left:30px; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+    .hero-blog { background:#000; color:#fff; padding:80px 0 60px; text-align:center; border-bottom:1px solid #333; }
+    .hero-blog h1 { font-family:var(--font-heading); font-size:3em; margin:0; }
+    .posts { padding:60px 0; }
+    .post-card { display:grid; grid-template-columns:200px 1fr; gap:30px; margin-bottom:40px; border-bottom:1px solid #eee; padding-bottom:40px; }
+    .post-card img { width:100%; height:150px; object-fit:cover; }
+    .post-card h2 { font-family:var(--font-heading); margin-top:0; }
+    .post-card a { color:var(--primary); text-decoration:none; font-weight:600; }
+    footer { background:#000; color:#555; padding:60px 0; text-align:center; border-top:1px solid #333; }
+    footer a { color:#888; text-decoration:none; margin:0 12px; }
+</style></head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="/" class="logo-link"><img src="https://abvorn.netlify.app/logo.png" alt="Abvorn" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text">Abvorn</span></a>
+        <nav><a href="/store.html" class="nav-link">Store</a><a href="/about.html" class="nav-link">About</a><a href="/privacy.html" class="nav-link">Privacy</a></nav>
+    </div>
+</header>
+<section class="hero-blog"><div class="container"><h1>{BLOG_TITLE}</h1><p style="font-size:1.2em;opacity:0.8;">Expert reviews and guides</p></div></section>
+<section class="container posts">{POST_LIST}</section>
+<footer><p>&copy; {YEAR} Abvorn. All rights reserved.</p><div><a href="/privacy.html">Privacy Policy</a> | <a href="/about.html">About Us</a></div></footer>
+</body>
+</html>
