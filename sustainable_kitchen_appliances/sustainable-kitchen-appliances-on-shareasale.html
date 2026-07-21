@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{BLOG_TITLE}} | Abvorn</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="preconnect" href="https://m.media-amazon.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{BLOG_TITLE}}",
+      "image": "{{HERO_IMAGE}}",
+      "author": { "@type": "Organization", "name": "Abvorn" },
+      "publisher": { "@type": "Organization", "name": "Abvorn" },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_UPDATED}}",
+      "keywords": "{{KEYWORDS}}",
+      "articleSection": "{{CATEGORY}}"
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family={{FONT_FAMILY}}&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff; --text: #111111; --surface: #f4f4f4; --border: #e0e0e0;
+            --primary: {{PRIMARY_COLOR}}; --accent: {{ACCENT_COLOR}};
+            --font-heading: '{{FONT_HEADING}}', serif;
+            --font-body: '{{FONT_BODY}}', sans-serif;
+        }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; font-size: 16px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        header { background: #000; padding: 20px 0; border-bottom: 4px solid var(--accent); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { max-height: 40px; width: auto; }
+        .logo-text { color: #fff; text-decoration: none; font-family: var(--font-heading); font-size: 24px; font-weight: 700; display: none; }
+        .logo-img:not([src]), .logo-img[src=""], .logo-img[src="#"] { display: none; }
+        .logo-img:not([src]) ~ .logo-text, .logo-img[src=""] ~ .logo-text, .logo-img[src="#"] ~ .logo-text { display: block; }
+        .nav-link { color: #fff; text-decoration: none; margin-left: 30px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+        .nav-link:hover { color: var(--accent); }
+        .hero { background: #000; color: #fff; padding: 80px 0 60px; border-bottom: 1px solid #333; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
+        @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding: 50px 0; } }
+        .category-tag { display: inline-block; background: var(--accent); color: #000; padding: 4px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .hero h1 { font-family: var(--font-heading); font-size: 56px; line-height: 1; margin: 0 0 25px; font-weight: 700; letter-spacing: -1px; }
+        .hero-meta { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 20px; }
+        .hero-excerpt { font-size: 18px; line-height: 1.6; color: #ccc; }
+        .hero-img-wrapper { position: relative; overflow: hidden; border: 2px solid #333; }
+        .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+        .hero-img:hover { transform: scale(1.05); }
+        .content-wrapper { padding: 60px 0; display: grid; grid-template-columns: 1fr 340px; gap: 60px; }
+        @media (max-width: 900px) { .content-wrapper { grid-template-columns: 1fr; } }
+        .article-body { font-size: 18px; line-height: 1.8; color: #333; }
+        .article-body p { margin-bottom: 30px; }
+        .article-body h2 { font-family: var(--font-heading); font-size: 32px; margin-top: 40px; color: var(--primary); }
+        .product-section { margin: 60px 0; }
+        .section-header { font-family: var(--font-body); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; }
+        .hero-product-card { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; background: #fff; border: 1px solid var(--border); padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        @media (max-width: 600px) { .hero-product-card { grid-template-columns: 1fr; } }
+        .product-img-container { background: #f9f9f9; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1; border: 1px solid #eee; }
+        .product-img { max-width: 90%; height: 90%; object-fit: contain; transition: transform 0.3s; }
+        .product-img:hover { transform: scale(1.1); }
+        .product-details { display: flex; flex-direction: column; justify-content: center; }
+        .product-tag { font-size: 11px; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .product-title { font-family: var(--font-heading); font-size: 32px; line-height: 1.2; margin-top: 0; margin-bottom: 15px; }
+        .product-rating { color: var(--accent); font-size: 20px; margin-bottom: 15px; }
+        .product-desc { font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 25px; }
+        .cta-btn { display: inline-block; background: var(--primary); color: white; padding: 16px 40px; text-decoration: none; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .cta-btn:hover { background: var(--accent); transform: translateY(-2px); }
+        .secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        @media (max-width: 600px) { .secondary-grid { grid-template-columns: 1fr; } }
+        .secondary-card { border: 1px solid var(--border); padding: 20px; transition: border-color 0.2s; }
+        .secondary-card:hover { border-color: var(--primary); }
+        .sec-img-wrap { background: #f9f9f9; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border:1px solid #eee; overflow:hidden; }
+        .sec-img { max-width: 90%; height: 90%; object-fit: contain; }
+        .sec-title { font-family: var(--font-heading); font-size: 22px; margin-top: 0; margin-bottom: 10px; line-height: 1.2; }
+        .sec-desc { font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 15px; }
+        .cta-btn-sm { display: inline-block; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .cta-btn-sm:hover { background: var(--primary); }
+        .sidebar { position: sticky; top: 80px; }
+        .sidebar-box { background: #000; color: #fff; padding: 30px; margin-bottom: 30px; }
+        .sidebar-title { font-family: var(--font-body); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-top: 0; margin-bottom: 20px; color: var(--accent); }
+        .email-input { width: 100%; padding: 14px; border: none; border-bottom: 2px solid #555; background: transparent; color: #fff; font-size: 15px; margin-bottom: 15px; box-sizing: border-box; }
+        .email-input:focus { outline: none; border-color: var(--accent); }
+        .submit-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 14px; font-weight: 800; cursor: pointer; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s; }
+        .submit-btn:hover { background: var(--accent); }
+        .mobile-sticky-bar { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 12px 20px; z-index: 200; border-top: 3px solid var(--accent); text-align: center; box-sizing: border-box; }
+        .mobile-sticky-bar .cta-btn { margin: 0; width: 100%; padding: 16px; }
+        @media (max-width: 900px) { .mobile-sticky-bar { display: block; } }
+        footer { background: #000; color: #555; padding: 60px 0; margin-top: 0; border-top: 1px solid #333; font-size: 13px; }
+        footer a { color: #888; text-decoration: none; margin: 0 12px; font-weight: 600; }
+        footer a:hover { color: var(--primary); }
+        .comments-section { margin-top: 40px; }
+    </style>
+    
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": { "popup": { "background": "#000" }, "button": { "background": "#f1d600" } },
+    "content": { "message": "This site uses cookies to improve your experience.", "dismiss": "Got it!", "link": "Learn more", "href": "/privacy.html" }
+  })});
+</script>
+<!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRZZQLWE5D"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BRZZQLWE5D');
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('a.cta-btn, a.cta-btn-sm')) {
+                gtag('event', 'affiliate_click', { 'event_category': 'engagement', 'event_label': e.target.href });
+            }
+        });
+        </script>
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="/" class="logo-link">
+            <img src="https://abvorn.netlify.app/logo.png" alt="Abvorn" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <span class="logo-text">Abvorn</span>
+        </a>
+        <nav>
+            <a href="/store.html" class="nav-link">Store</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/privacy.html" class="nav-link">Privacy</a>
+        </nav>
+    </div>
+</header>
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="category-tag">{{CATEGORY}}</span>
+                <h1>{{BLOG_TITLE}}</h1>
+                <div class="hero-meta">By Abvorn · {{DATE_UPDATED}}</div>
+                <p class="hero-excerpt">{{INTRO_PARAGRAPH}}</p>
+            </div>
+            <div class="hero-img-wrapper">
+                <img src="{{HERO_IMAGE}}" alt="{{BLOG_TITLE}}" class="hero-img">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container content-wrapper">
+    <div class="article-body">
+        
+<div style="background:#f9f9f9;border:1px solid #ddd;padding:15px;margin:30px 0;font-size:14px;color:#555;">
+    <strong>Disclosure:</strong> Some of the links in this article are affiliate links. This means we may earn a small commission if you make a purchase, at no additional cost to you. We only recommend products we genuinely believe in.
+</div>
+        {{ARTICLE_BODY_WITH_PRODUCTS}}
+        <div class="comments-section">
+            <p>Questions? Comments? <a href="#">Join the conversation</a>.</p>
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="sidebar-box">
+            <h3 class="sidebar-title">Get the Free Guide</h3>
+            <p style="font-size:14px;margin-bottom:20px;color:#ccc;">Enter your email and we'll send the <strong>{{LEAD_MAGNET_TITLE}}</strong> PDF directly to your inbox.</p>
+            <form id="lead-form" onsubmit="submitLead(event)">
+                <input type="email" id="lead-email" placeholder="your@email.com" class="email-input" required>
+                <button type="submit" class="submit-btn">Send Me the Guide</button>
+            </form>
+            <p id="subscribe-msg" style="font-size:11px;color:#666;text-align:center;margin-top:10px;"></p>
+        </div>
+    </aside>
+</section>
+<div class="mobile-sticky-bar">
+    <a href="{{PRODUCT_1_AFF_LINK}}" class="cta-btn" target="_blank" rel="nofollow sponsored">View Best Price</a>
+</div>
+<footer>
+    <div class="container" style="text-align:center;">
+        <p>&copy; {{YEAR}} Abvorn. All rights reserved.</p>
+        <div style="margin-top:10px;"><a href="/privacy.html">Privacy Policy</a> | <a href="/about.html">About Us</a></div>
+    </div>
+</footer>
+<script>
+const APPS_SCRIPT_URL = "{{APPS_SCRIPT_URL}}";   // Replaced dynamically below
+async function submitLead(e) {
+    e.preventDefault();
+    const email = document.getElementById('lead-email').value.trim();
+    if (!email) return;
+    document.getElementById('subscribe-msg').innerText = 'Sending...';
+    try {
+        const response = await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, niche: '{{NICHE_SLUG}}', source: 'blog_sidebar', lead_magnet: '{{LEAD_MAGNET_TITLE}}' })
+        });
+        const result = await response.json();
+        document.getElementById('subscribe-msg').innerText = result.success ? 'Success! Check your inbox.' : (result.message || 'Oops, try again.');
+    } catch (err) {
+        document.getElementById('subscribe-msg').innerText = 'Connection error. Please try later.';
+    }
+}
+</script>
+</body>
+</html>
