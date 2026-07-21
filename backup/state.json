@@ -1,0 +1,282 @@
+{
+  "queue": [
+    {
+      "slug": "sustainable_kitchen_appliances",
+      "niche": "sustainable kitchen appliances",
+      "stage": "products"
+    },
+    {
+      "slug": "home_office_ergonomic_equipment",
+      "niche": "home office ergonomic equipment",
+      "stage": "products"
+    }
+  ],
+  "completed": [],
+  "failed": [],
+  "deployed": [
+    "smart_home_security_systems"
+  ],
+  "performance": {
+    "TrendEngine": {
+      "total_niches_found": 3
+    }
+  },
+  "redirects": {},
+  "model_metrics": [
+    {
+      "provider": "glm",
+      "time": 8.387019634246826,
+      "tokens": 639
+    },
+    {
+      "provider": "glm",
+      "time": 7.158279180526733,
+      "tokens": 646
+    },
+    {
+      "provider": "glm",
+      "time": 28.253815412521362,
+      "tokens": 643
+    },
+    {
+      "provider": "glm",
+      "time": 4.354449510574341,
+      "tokens": 588
+    },
+    {
+      "provider": "glm",
+      "time": 4.033711910247803,
+      "tokens": 550
+    },
+    {
+      "provider": "glm",
+      "time": 2.675234794616699,
+      "tokens": 495
+    },
+    {
+      "provider": "glm",
+      "time": 1.717015027999878,
+      "tokens": 476
+    },
+    {
+      "provider": "glm",
+      "time": 3.8524961471557617,
+      "tokens": 545
+    },
+    {
+      "provider": "glm",
+      "time": 2.5789594650268555,
+      "tokens": 494
+    },
+    {
+      "provider": "glm",
+      "time": 2.003878355026245,
+      "tokens": 506
+    },
+    {
+      "provider": "glm",
+      "time": 19.58620524406433,
+      "tokens": 564
+    },
+    {
+      "provider": "glm",
+      "time": 4.3048295974731445,
+      "tokens": 494
+    },
+    {
+      "provider": "glm",
+      "time": 9.0430428981781,
+      "tokens": 480
+    },
+    {
+      "provider": "glm",
+      "time": 8.070483922958374,
+      "tokens": 649
+    },
+    {
+      "provider": "glm",
+      "time": 12.00831127166748,
+      "tokens": 637
+    },
+    {
+      "provider": "glm",
+      "time": 4.637198209762573,
+      "tokens": 556
+    },
+    {
+      "provider": "glm",
+      "time": 3.1213865280151367,
+      "tokens": 496
+    },
+    {
+      "provider": "glm",
+      "time": 1.8450579643249512,
+      "tokens": 478
+    },
+    {
+      "provider": "glm",
+      "time": 109.63205552101135,
+      "tokens": 4210
+    },
+    {
+      "provider": "glm",
+      "time": 92.52360796928406,
+      "tokens": 5493
+    },
+    {
+      "provider": "glm",
+      "time": 10.87671422958374,
+      "tokens": 664
+    },
+    {
+      "provider": "glm",
+      "time": 26.19966459274292,
+      "tokens": 903
+    },
+    {
+      "provider": "glm",
+      "time": 18.088623523712158,
+      "tokens": 770
+    },
+    {
+      "provider": "glm",
+      "time": 20.65760064125061,
+      "tokens": 572
+    },
+    {
+      "provider": "glm",
+      "time": 9.879879236221313,
+      "tokens": 500
+    },
+    {
+      "provider": "glm",
+      "time": 20.40840983390808,
+      "tokens": 475
+    },
+    {
+      "provider": "glm",
+      "time": 91.46512269973755,
+      "tokens": 3531
+    },
+    {
+      "provider": "glm",
+      "time": 53.522449254989624,
+      "tokens": 730
+    },
+    {
+      "provider": "glm",
+      "time": 41.069849252700806,
+      "tokens": 853
+    },
+    {
+      "provider": "glm",
+      "time": 27.461036920547485,
+      "tokens": 699
+    },
+    {
+      "provider": "glm",
+      "time": 9.761576652526855,
+      "tokens": 553
+    },
+    {
+      "provider": "glm",
+      "time": 4.1574132442474365,
+      "tokens": 492
+    },
+    {
+      "provider": "glm",
+      "time": 9.59672474861145,
+      "tokens": 477
+    },
+    {
+      "provider": "glm",
+      "time": 87.55395984649658,
+      "tokens": 3611
+    },
+    {
+      "provider": "glm",
+      "time": 38.48335385322571,
+      "tokens": 676
+    },
+    {
+      "provider": "glm",
+      "time": 40.654348373413086,
+      "tokens": 761
+    },
+    {
+      "provider": "glm",
+      "time": 24.680338621139526,
+      "tokens": 886
+    },
+    {
+      "provider": "glm",
+      "time": 5.080795049667358,
+      "tokens": 665
+    },
+    {
+      "provider": "glm",
+      "time": 2.761089563369751,
+      "tokens": 549
+    },
+    {
+      "provider": "glm",
+      "time": 2.147601842880249,
+      "tokens": 496
+    },
+    {
+      "provider": "glm",
+      "time": 1.301015853881836,
+      "tokens": 474
+    },
+    {
+      "provider": "glm",
+      "time": 48.31757092475891,
+      "tokens": 4043
+    },
+    {
+      "provider": "glm",
+      "time": 15.530705690383911,
+      "tokens": 919
+    },
+    {
+      "provider": "glm",
+      "time": 10.27541971206665,
+      "tokens": 810
+    },
+    {
+      "provider": "glm",
+      "time": 32.22581076622009,
+      "tokens": 830
+    },
+    {
+      "provider": "glm",
+      "time": 3.616142749786377,
+      "tokens": 574
+    },
+    {
+      "provider": "glm",
+      "time": 2.330570697784424,
+      "tokens": 501
+    },
+    {
+      "provider": "glm",
+      "time": 40.68507528305054,
+      "tokens": 3808
+    },
+    {
+      "provider": "glm",
+      "time": 8.349068880081177,
+      "tokens": 712
+    },
+    {
+      "provider": "glm",
+      "time": 9.921313285827637,
+      "tokens": 824
+    },
+    {
+      "provider": "glm",
+      "time": 10.380131244659424,
+      "tokens": 792
+    }
+  ]
+}
