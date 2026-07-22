@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{{PAGE_TITLE}} | Abvorn</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    :root { --primary: {{PRIMARY_COLOR}}; --accent: {{ACCENT_COLOR}}; }
+    body { font-family:'Inter',sans-serif; margin:0; background:#fff; color:#333; }
+    .top-bar { background:#000; color:#aaa; font-size:0.85rem; padding:8px 0; }
+    .top-bar .container { display:flex; justify-content:space-between; max-width:1200px; margin:0 auto; padding:0 20px; }
+    header { background:#000; border-bottom:4px solid var(--accent); padding:20px 0; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:0 auto; padding:0 20px; }
+    .logo img { max-height:40px; }
+    .nav-links a { color:#fff; text-decoration:none; margin-left:30px; font-weight:600; }
+    main { max-width:800px; margin:60px auto; padding:0 20px; }
+    h1 { font-family:'Playfair Display',serif; font-size:2.5rem; }
+    .footer { background:#000; color:#888; text-align:center; padding:60px 0; }
+    .footer a { color:#aaa; text-decoration:none; margin:0 12px; }
+</style></head>
+<body>
+<div class="top-bar"><div class="container"><a href="/">Home</a></div></div>
+<header><div class="navbar"><a href="/" class="logo"><img src="https://abvorn.netlify.app/logo.png" alt="Abvorn"></a><nav class="nav-links"><a href="/store.html">Store</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></div></header>
+<main><h1>{{PAGE_TITLE}}</h1>{{PAGE_CONTENT}}</main>
+<footer class="footer"><p>&copy; {{YEAR}} Abvorn</p></footer>
+</body>
+</html>
