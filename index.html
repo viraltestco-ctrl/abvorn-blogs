@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://abvorn-media.github.io/abvorn/logo.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <title>Abvorn – The Fortress of Knowledge</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -18,18 +18,26 @@
         .hero h1 { font-family:'Playfair Display',serif; font-size:4rem; margin-bottom:20px; }
         .hero p { font-size:1.2rem; opacity:0.8; max-width:600px; margin:0 auto 30px; }
         .hero-cta { background:var(--accent); color:#fff; padding:14px 40px; text-decoration:none; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+        /* Trending ticker */
+        .trending-ticker { background: linear-gradient(90deg, var(--accent), transparent); color:#fff; padding:8px 0; font-size:0.85rem; overflow:hidden; white-space:nowrap; }
+        .trending-ticker__inner { display:inline-block; animation: ticker-scroll 20s linear infinite; }
+        .trending-ticker__label { font-weight:700; margin-right:15px; }
+        .trending-ticker__item { color:#fff; text-decoration:none; padding:0 10px; }
+        @keyframes ticker-scroll { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
         .niche-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:30px; max-width:1200px; margin:60px auto; padding:0 20px; }
-        .niche-card { border:1px solid #e0e0e0; padding:20px; }
-        .niche-card img { width:100%; height:200px; object-fit:cover; }
+        .niche-card { border:1px solid #e0e0e0; padding:20px; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
+        .niche-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .niche-card img { width:100%; height:200px; object-fit:cover; border-radius:4px; }
         .niche-card h2 { font-family:'Playfair Display',serif; font-size:1.5rem; margin:15px 0; }
-        .niche-card a.btn { background:var(--accent); color:#fff; padding:10px 20px; text-decoration:none; font-weight:600; display:inline-block; }
+        .niche-card a.btn { background:var(--accent); color:#fff; padding:10px 20px; text-decoration:none; font-weight:600; display:inline-block; border-radius:4px; }
         .footer { background:#000; color:#888; text-align:center; padding:60px 0; }
         .footer a { color:#aaa; text-decoration:none; margin:0 12px; }
     </style>
 </head>
 <body>
 <div class="top-bar"><div class="container"><span>Welcome to Abvorn</span></div></div>
-<header><div class="navbar"><a href="/" class="logo"><img src="https://abvorn-media.github.io/abvorn/logo.png" alt="Abvorn"></a><nav class="nav-links"><a href="/store.html">Store</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></div></header>
+<header><div class="navbar"><a href="/" class="logo"><img src="/logo.png" alt="Abvorn"></a><nav class="nav-links"><a href="/store.html">Store</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></div></header>
+<div class="trending-ticker"><div class="container"><div class="trending-ticker__inner"><span class="trending-ticker__label">🔥 Trending Now:</span><span id="trending-items">Loading...</span></div></div></div>
 <section class="hero">
     <h1>The Fortress of Knowledge</h1>
     <p>AI‑powered, expert‑curated product reviews and buying guides. We do the research so you can shop smarter.</p>
@@ -43,7 +51,60 @@
                 <p>...</p>
                 <a href="/home_office_ergonomic_equipment/" class="btn">Explore Now</a>
             </div>
+            <div class="niche-card">
+                <a href="/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances"></a>
+                <h2><a href="/sustainable_kitchen_appliances/">Sustainable Kitchen Appliances</a></h2>
+                <p>...</p>
+                <a href="/sustainable_kitchen_appliances/" class="btn">Explore Now</a>
+            </div>
+            <div class="niche-card">
+                <a href="/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems"></a>
+                <h2><a href="/smart_home_security_systems/">Smart Home Security Systems</a></h2>
+                <p>...</p>
+                <a href="/smart_home_security_systems/" class="btn">Explore Now</a>
+            </div>
+            <div class="niche-card">
+                <a href="/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances"></a>
+                <h2><a href="/sustainable_kitchen_appliances/">Sustainable Kitchen Appliances</a></h2>
+                <p>...</p>
+                <a href="/sustainable_kitchen_appliances/" class="btn">Explore Now</a>
+            </div>
+            <div class="niche-card">
+                <a href="/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems"></a>
+                <h2><a href="/smart_home_security_systems/">Smart Home Security Systems</a></h2>
+                <p>...</p>
+                <a href="/smart_home_security_systems/" class="btn">Explore Now</a>
+            </div>
+            <div class="niche-card">
+                <a href="/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances"></a>
+                <h2><a href="/sustainable_kitchen_appliances/">Sustainable Kitchen Appliances</a></h2>
+                <p>...</p>
+                <a href="/sustainable_kitchen_appliances/" class="btn">Explore Now</a>
+            </div>
+            <div class="niche-card">
+                <a href="/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems"></a>
+                <h2><a href="/smart_home_security_systems/">Smart Home Security Systems</a></h2>
+                <p>...</p>
+                <a href="/smart_home_security_systems/" class="btn">Explore Now</a>
+            </div>
+            <div class="niche-card">
+                <a href="/zero-waste_kitchen_hacks/"><img src="https://i.pinimg.com/736x/d1/3e/fa/d13efaf8e44ef585f7109fac2a9bbd21.jpg" alt="Zero-Waste Kitchen Hacks"></a>
+                <h2><a href="/zero-waste_kitchen_hacks/">Zero-Waste Kitchen Hacks</a></h2>
+                <p>...</p>
+                <a href="/zero-waste_kitchen_hacks/" class="btn">Explore Now</a>
+            </div>
 </section>
 <footer class="footer"><p>&copy; 2026 Abvorn</p><div><a href="/privacy.html">Privacy</a> | <a href="/about.html">About</a></div></footer>
+<script>
+// Fetch trending niches
+(async function() {
+    try {
+        const resp = await fetch('/trending.json');
+        const data = await resp.json();
+        const items = data.map(n => `<a href="/${n.slug}/" class="trending-ticker__item">${n.name}</a>`).join(' · ');
+        document.getElementById('trending-items').innerHTML = items;
+    } catch(e) { document.getElementById('trending-items').innerHTML = 'Smart Home Security · Sustainable Kitchen · Standing Desks'; }
+})();
+</script>
 </body>
 </html>

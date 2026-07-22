@@ -4637,3 +4637,18 @@ Files larger than 500KB are rejected before any API call is made.
 ### Reporting a vulnerability
 
 If you believe you've found a genuine security issue, please open a GitHub issue with the label `security`.
+
+--- candidate_202607221205 ---
+### **Skill: "Niche-Driven Content Sequencing"**
+
+**Action:** For every new content piece, use TrendEngine to identify one high-potential niche (e.g., "sustainable pet products") and immediately map out a three-part content sequence before writing.
+
+**The Sequence:**
+
+1.  **The "Hook" Post (Day 1):** Create a high-traffic, low-commitment listicle or guide targeting a broad, top-of-funnel question. *Example: "10 Eco-Friendly Dog Toys Your Pet Will Actually Love."* Goal is to capture initial interest and rank for broad keywords.
+
+2.  **The "Deep Dive" Post (Day 3):** Follow up with a long-form, authoritative pillar post targeting a specific, high-intent keyword within that niche. *Example: "The Ultimate Guide to Biodegradable Cat Litter: Health, Cost, and Performance."* Goal is to establish topical authority and capture qualified leads.
+
+3.  **The "Conversion" Asset (Day 5):** Develop a lead-generating tool or downloadable resource directly related to the deep dive. *Example: "Free Printable: 'Is This Cat Litter Brand Truly Sustainable?' Checklist."* Goal is to convert engaged readers into leads for your email list or a product.
+
+**Why it works:** This structure moves audiences from passive readers to engaged leads by systematically building trust and delivering increasing value within a validated, high-potential niche identified by data.

@@ -1,6 +1,12 @@
 {
   "queue": [],
   "completed": [
+    "TrendEngine",
+    "complete_guide_to_home_brewing_equipment_for_beginners"
+  ],
+  "failed": [],
+  "deployed": [
+    "home_office_ergonomic_equipment",
     "sustainable_kitchen_appliances",
     "smart_home_security_systems",
     "sustainable_kitchen_appliances",
@@ -8,10 +14,6 @@
     "sustainable_kitchen_appliances",
     "smart_home_security_systems",
     "zero-waste_kitchen_hacks"
-  ],
-  "failed": [],
-  "deployed": [
-    "home_office_ergonomic_equipment"
   ],
   "performance": {
     "TrendEngine": {
@@ -429,6 +431,66 @@
       "provider": "glm",
       "time": 31.047810316085815,
       "tokens": 1781
+    },
+    {
+      "provider": "glm",
+      "time": 41.10827898979187,
+      "tokens": 3524
+    },
+    {
+      "provider": "glm",
+      "time": 4.043508768081665,
+      "tokens": 825
+    },
+    {
+      "provider": "glm",
+      "time": 4.696229934692383,
+      "tokens": 581
+    },
+    {
+      "provider": "glm",
+      "time": 11.066519498825073,
+      "tokens": 871
+    },
+    {
+      "provider": "glm",
+      "time": 18.321041345596313,
+      "tokens": 1213
+    },
+    {
+      "provider": "glm",
+      "time": 5.530189514160156,
+      "tokens": 658
+    },
+    {
+      "provider": "glm",
+      "time": 4.9738616943359375,
+      "tokens": 1208
+    },
+    {
+      "provider": "glm",
+      "time": 34.91132116317749,
+      "tokens": 3349
+    },
+    {
+      "provider": "glm",
+      "time": 4.320019245147705,
+      "tokens": 846
+    },
+    {
+      "provider": "glm",
+      "time": 10.457443952560425,
+      "tokens": 721
+    },
+    {
+      "provider": "glm",
+      "time": 9.72453236579895,
+      "tokens": 815
+    },
+    {
+      "provider": "glm",
+      "time": 8.681206941604614,
+      "tokens": 763
     }
   ]
 }
