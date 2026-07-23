@@ -2,109 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/abvorn/favicon.svg">
     <title>Abvorn – The Fortress of Knowledge</title>
+    <meta name="description" content="AI-powered, expert-curated product reviews and buying guides. We do the research so you can shop smarter.">
+    <meta property="og:title" content="Abvorn – The Fortress of Knowledge">
+    <meta property="og:description" content="Expert-curated product reviews and buying guides.">
+    <meta property="og:image" content="/abvorn/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="Abvorn RSS Feed" href="/abvorn/rss.xml">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Abvorn","url":"https://abvorn-media.github.io/abvorn","potentialAction":{"@type":"SearchAction","target":"https://abvorn-media.github.io/abvorn/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
     <style>
-        :root { --primary: #C0C0C0; --accent: #5A7D9A; }
-        body { font-family:'Inter',sans-serif; margin:0; background:#fff; color:#333; }
-        .top-bar { background:#000; color:#aaa; font-size:0.85rem; padding:8px 0; }
-        .top-bar .container { display:flex; justify-content:space-between; max-width:1200px; margin:0 auto; padding:0 20px; }
-        header { background:#000; border-bottom:4px solid var(--accent); padding:20px 0; }
-        .navbar { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:0 auto; padding:0 20px; }
-        .logo img { max-height:60px; width:auto; }
-        .nav-links a { color:#fff; text-decoration:none; margin-left:30px; font-weight:600; }
-        .hero { background:#000; color:#fff; text-align:center; padding:100px 0 80px; }
-        .hero h1 { font-family:'Playfair Display',serif; font-size:4rem; margin-bottom:20px; }
-        .hero p { font-size:1.2rem; opacity:0.8; max-width:600px; margin:0 auto 30px; }
-        .hero-cta { background:var(--accent); color:#fff; padding:14px 40px; text-decoration:none; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
-        /* Trending ticker */
-        .trending-ticker { background: linear-gradient(90deg, var(--accent), transparent); color:#fff; padding:8px 0; font-size:0.85rem; overflow:hidden; white-space:nowrap; }
-        .trending-ticker__inner { display:inline-block; animation: ticker-scroll 20s linear infinite; }
-        .trending-ticker__label { font-weight:700; margin-right:15px; }
-        .trending-ticker__item { color:#fff; text-decoration:none; padding:0 10px; }
-        @keyframes ticker-scroll { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
-        .niche-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:30px; max-width:1200px; margin:60px auto; padding:0 20px; }
-        .niche-card { border:1px solid #e0e0e0; padding:20px; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
-        .niche-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .niche-card img { width:100%; height:200px; object-fit:cover; border-radius:4px; }
-        .niche-card h2 { font-family:'Playfair Display',serif; font-size:1.5rem; margin:15px 0; }
-        .niche-card a.btn { background:var(--accent); color:#fff; padding:10px 20px; text-decoration:none; font-weight:600; display:inline-block; border-radius:4px; }
-        .footer { background:#000; color:#888; text-align:center; padding:60px 0; }
-        .footer a { color:#aaa; text-decoration:none; margin:0 12px; }
+:root{--primary:#C0C0C0;--accent:#5A7D9A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#fff;color:#333;line-height:1.6}
+.top-bar{background:#000;color:#aaa;font-size:0.85rem;padding:8px 0}
+.top-bar .container{display:flex;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 20px}
+header{background:#000;border-bottom:4px solid var(--accent);padding:20px 0}
+.navbar{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}
+.logo img{max-height:60px;width:auto}
+.nav-links a{color:#fff;text-decoration:none;margin-left:30px;font-weight:600;transition:opacity 0.2s}
+.nav-links a:hover{opacity:0.8}
+.hero{background:#000;color:#fff;text-align:center;padding:100px 0 80px}
+.hero h1{font-family:'Playfair Display',serif;font-size:4rem;margin-bottom:20px}
+.hero p{font-size:1.2rem;opacity:0.8;max-width:600px;margin:0 auto 30px}
+.hero-cta{background:var(--accent);color:#fff;padding:14px 40px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:1px;display:inline-block;border-radius:6px;transition:transform 0.2s,box-shadow 0.2s}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(90,125,154,0.4)}
+.trending-ticker{background:linear-gradient(90deg,var(--accent),transparent);color:#fff;padding:8px 0;font-size:0.85rem;overflow:hidden;white-space:nowrap}
+.trending-ticker__inner{display:inline-block;animation:ticker-scroll 20s linear infinite}
+.trending-ticker__label{font-weight:700;margin-right:15px}
+.trending-ticker__item{color:#fff;text-decoration:none;padding:0 10px}
+@keyframes ticker-scroll{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+.stats-bar{display:flex;justify-content:center;gap:40px;padding:30px 20px;background:var(--accent);color:#fff;text-align:center}
+.stat-number{font-size:2rem;font-weight:700}
+.stat-label{font-size:0.85rem;opacity:0.9}
+.niche-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:30px;max-width:1200px;margin:60px auto;padding:0 20px}
+.niche-card{border:1px solid #e0e0e0;padding:20px;border-radius:12px;transition:transform 0.3s,box-shadow 0.3s;background:#fff;display:flex;flex-direction:column}
+.niche-card:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(0,0,0,0.1)}
+.niche-card img{width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px}
+.niche-card h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin:0 0 10px}
+.niche-card p{font-size:0.9rem;color:#666;margin-bottom:15px;flex:1}
+.niche-card .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 24px;text-decoration:none;font-weight:600;border-radius:6px;text-align:center;transition:transform 0.2s,box-shadow 0.2s;align-self:flex-start}
+.niche-card .btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(90,125,154,0.3)}
+.footer{background:#000;color:#888;padding:40px 0;text-align:center;margin-top:80px}
+.footer a{color:#aaa;text-decoration:none;margin:0 10px}
+.footer a:hover{color:#fff}
+@media(max-width:768px){.hero h1{font-size:2.5rem}.hero{padding:60px 0 50px}.stats-bar{flex-direction:column;gap:20px}}
     </style>
 </head>
 <body>
-<div class="top-bar"><div class="container"><span>Welcome to Abvorn</span></div></div>
-<header><div class="navbar"><a href="/" class="logo"><img src="/logo.png" alt="Abvorn"></a><nav class="nav-links"><a href="/store.html">Store</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></div></header>
-<div class="trending-ticker"><div class="container"><div class="trending-ticker__inner"><span class="trending-ticker__label">🔥 Trending Now:</span><span id="trending-items">Loading...</span></div></div></div>
+<div class="top-bar"><div class="container"><span>Welcome to Abvorn – Expert Reviews, Honest Recommendations</span><span><a href="/abvorn/rss.xml" style="color:#aaa;text-decoration:none">📡 RSS</a></span></div></div>
+<header><div class="navbar"><a href="/abvorn/" class="logo"><img src="/abvorn/logo.svg" alt="Abvorn"></a><nav class="nav-links"><a href="/abvorn/store.html">Store</a><a href="/abvorn/about.html">About</a><a href="/abvorn/privacy.html">Privacy</a></nav></div></header>
+<div class="trending-ticker"><div class="container"><div class="trending-ticker__inner"><span class="trending-ticker__label">Trending Now:</span><span id="trending-items">Loading...</span></div></div></div>
 <section class="hero">
     <h1>The Fortress of Knowledge</h1>
-    <p>AI‑powered, expert‑curated product reviews and buying guides. We do the research so you can shop smarter.</p>
+    <p>AI-powered, expert-curated product reviews and buying guides. We do the research so you can shop smarter.</p>
     <a href="#niches" class="hero-cta">Explore Top Picks</a>
 </section>
-<section class="niche-grid" id="niches">
-    
-            <div class="niche-card">
-                <a href="/home_office_ergonomic_equipment/"><img src="https://images.pexels.com/photos/31726663/pexels-photo-31726663.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Home Office Ergonomic Equipment"></a>
-                <h2><a href="/home_office_ergonomic_equipment/">Home Office Ergonomic Equipment</a></h2>
-                <p>...</p>
-                <a href="/home_office_ergonomic_equipment/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances"></a>
-                <h2><a href="/sustainable_kitchen_appliances/">Sustainable Kitchen Appliances</a></h2>
-                <p>...</p>
-                <a href="/sustainable_kitchen_appliances/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems"></a>
-                <h2><a href="/smart_home_security_systems/">Smart Home Security Systems</a></h2>
-                <p>...</p>
-                <a href="/smart_home_security_systems/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances"></a>
-                <h2><a href="/sustainable_kitchen_appliances/">Sustainable Kitchen Appliances</a></h2>
-                <p>...</p>
-                <a href="/sustainable_kitchen_appliances/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems"></a>
-                <h2><a href="/smart_home_security_systems/">Smart Home Security Systems</a></h2>
-                <p>...</p>
-                <a href="/smart_home_security_systems/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances"></a>
-                <h2><a href="/sustainable_kitchen_appliances/">Sustainable Kitchen Appliances</a></h2>
-                <p>...</p>
-                <a href="/sustainable_kitchen_appliances/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems"></a>
-                <h2><a href="/smart_home_security_systems/">Smart Home Security Systems</a></h2>
-                <p>...</p>
-                <a href="/smart_home_security_systems/" class="btn">Explore Now</a>
-            </div>
-            <div class="niche-card">
-                <a href="/zero-waste_kitchen_hacks/"><img src="https://i.pinimg.com/736x/d1/3e/fa/d13efaf8e44ef585f7109fac2a9bbd21.jpg" alt="Zero-Waste Kitchen Hacks"></a>
-                <h2><a href="/zero-waste_kitchen_hacks/">Zero-Waste Kitchen Hacks</a></h2>
-                <p>...</p>
-                <a href="/zero-waste_kitchen_hacks/" class="btn">Explore Now</a>
-            </div>
-</section>
-<footer class="footer"><p>&copy; 2026 Abvorn</p><div><a href="/privacy.html">Privacy</a> | <a href="/about.html">About</a></div></footer>
+<div class="stats-bar" id="stats-bar"></div>
+<section class="niche-grid" id="niches"><div class="niche-card"><a href="/abvorn/home_office_ergonomic_equipment/"><img src="https://images.pexels.com/photos/31726663/pexels-photo-31726663.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Home Office Ergonomic Equipment" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/home_office_ergonomic_equipment/" style="color:inherit;text-decoration:none">Home Office Ergonomic Equipment</a></h2><p>...</p><a href="/abvorn/home_office_ergonomic_equipment/" class="btn">Explore Now</a></div><div class="niche-card"><a href="/abvorn/sustainable_kitchen_appliances/"><img src="https://images.pexels.com/photos/7512869/pexels-photo-7512869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sustainable Kitchen Appliances" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/sustainable_kitchen_appliances/" style="color:inherit;text-decoration:none">Sustainable Kitchen Appliances</a></h2><p>...</p><a href="/abvorn/sustainable_kitchen_appliances/" class="btn">Explore Now</a></div><div class="niche-card"><a href="/abvorn/smart_home_security_systems/"><img src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Smart Home Security Systems" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/smart_home_security_systems/" style="color:inherit;text-decoration:none">Smart Home Security Systems</a></h2><p>...</p><a href="/abvorn/smart_home_security_systems/" class="btn">Explore Now</a></div><div class="niche-card"><a href="/abvorn/zero-waste_kitchen_hacks/"><img src="https://i.pinimg.com/736x/d1/3e/fa/d13efaf8e44ef585f7109fac2a9bbd21.jpg" alt="Zero-Waste Kitchen Hacks" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/zero-waste_kitchen_hacks/" style="color:inherit;text-decoration:none">Zero-Waste Kitchen Hacks</a></h2><p>...</p><a href="/abvorn/zero-waste_kitchen_hacks/" class="btn">Explore Now</a></div><div class="niche-card"><a href="/abvorn/TrendEngine/"><img src="https://images.pexels.com/photos/33020758/pexels-photo-33020758.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Trendengine" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/TrendEngine/" style="color:inherit;text-decoration:none">Trendengine</a></h2><p>...</p><a href="/abvorn/TrendEngine/" class="btn">Explore Now</a></div><div class="niche-card"><a href="/abvorn/complete_guide_to_home_brewing_equipment_for_beginners/"><img src="https://images.pexels.com/photos/19723757/pexels-photo-19723757.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Complete Guide To Home Brewing Equipment For Beginners" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/complete_guide_to_home_brewing_equipment_for_beginners/" style="color:inherit;text-decoration:none">Complete Guide To Home Brewing Equipment For Beginners</a></h2><p>...</p><a href="/abvorn/complete_guide_to_home_brewing_equipment_for_beginners/" class="btn">Explore Now</a></div><div class="niche-card"><a href="/abvorn/energy-efficient_home_appliances_that_pay_for_themselves/"><img src="https://images.pexels.com/photos/4700400/pexels-photo-4700400.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Energy-Efficient Home Appliances That Pay For Themselves" loading="lazy" width="800" height="600"></a><h2><a href="/abvorn/energy-efficient_home_appliances_that_pay_for_themselves/" style="color:inherit;text-decoration:none">Energy-Efficient Home Appliances That Pay For Themselves</a></h2><p>Discover top-rated energy-efficient appliances that save you money long-term. Expert reviews &amp; buying guide for eco-cons...</p><a href="/abvorn/energy-efficient_home_appliances_that_pay_for_themselves/" class="btn">Explore Now</a></div></section>
+<footer class="footer"><p>&copy; 2026 Abvorn</p><div><a href="/abvorn/privacy.html">Privacy</a> | <a href="/abvorn/about.html">About</a> | <a href="/abvorn/rss.xml">RSS Feed</a></div></footer>
 <script>
-// Fetch trending niches
-(async function() {
-    try {
-        const resp = await fetch('/trending.json');
-        const data = await resp.json();
-        const items = data.map(n => `<a href="/${n.slug}/" class="trending-ticker__item">${n.name}</a>`).join(' · ');
-        document.getElementById('trending-items').innerHTML = items;
-    } catch(e) { document.getElementById('trending-items').innerHTML = 'Smart Home Security · Sustainable Kitchen · Standing Desks'; }
-})();
+(async function(){try{var r=await fetch('/abvorn/trending.json');var d=await r.json();document.getElementById('trending-items').innerHTML=d.map(function(n){return'<a href="/abvorn/'+n.slug+'/" class="trending-ticker__item">'+n.name+'</a>'}).join(' · ')}catch(e){document.getElementById('trending-items').innerHTML='Loading guides...'}})();
+(async function(){try{var r=await fetch('/abvorn/trending.json');var d=await r.json();var s=document.getElementById('stats-bar');if(d.length){s.innerHTML='<div class="stat"><div class="stat-number">'+d.length+'</div><div class="stat-label">Expert Guides</div></div><div class="stat"><div class="stat-number">★</div><div class="stat-label">Rigorous Testing</div></div><div class="stat"><div class="stat-number">100%</div><div class="stat-label">Independent Reviews</div></div>'}}catch(e){}})();
 </script>
 </body>
 </html>
